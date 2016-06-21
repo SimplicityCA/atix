@@ -1,11 +1,11 @@
 <?php
 // HTTP
-define('HTTP_SERVER', 'http://localhost/~franklin/atix/upload/admin/');
-define('HTTP_CATALOG', 'http://localhost/~franklin/atix/upload/');
+define('HTTP_SERVER', 'http://atix.dev/upload/admin/');
+define('HTTP_CATALOG', 'http://atix.dev/upload/');
 
 // HTTPS
-define('HTTPS_SERVER', 'http://localhost/~franklin/atix/upload/admin/');
-define('HTTPS_CATALOG', 'http://localhost/~franklin/atix/upload/');
+define('HTTPS_SERVER', 'http://atix.dev/admin/');
+define('HTTPS_CATALOG', 'http://atix.dev/upload/');
 
 // DIR
 define('DIR_APPLICATION', '/Users/franklin/Sites/atix/upload/admin/');
