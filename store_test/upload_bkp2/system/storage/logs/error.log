@@ -1,0 +1,2 @@
+2016-07-04 9:09:22 - PHP Notice:  Error: Could not load template /Users/joshuafabara/Sites/store_test/upload/catalog/view/theme/default/template/common/footer_top.tpl! in /Users/joshuafabara/Sites/store_test/upload/system/library/template/basic.php on line 26
+2016-07-04 9:28:33 - PHP Notice:  Error: Could not load template /Users/joshuafabara/Sites/store_test/upload/catalog/view/theme/default/template/common/footer_top.tpl! in /Users/joshuafabara/Sites/store_test/upload/system/library/template/basic.php on line 26
