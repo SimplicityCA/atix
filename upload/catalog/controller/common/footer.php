@@ -20,6 +20,11 @@ class ControllerCommonFooter extends Controller {
 		$data['text_wishlist'] = $this->language->get('text_wishlist');
 		$data['text_newsletter'] = $this->language->get('text_newsletter');
 
+		$data['footer_top'] = $this->load->controller('common/footer_top');
+		$data['footer_right'] = $this->load->controller('common/footer_right');
+		$data['footer_bottom'] = $this->load->controller('common/footer_bottom');
+		$data['footer_left'] = $this->load->controller('common/footer_left');
+		
 		$this->load->model('catalog/information');
 
 		$data['informations'] = array();
@@ -72,6 +77,6 @@ class ControllerCommonFooter extends Controller {
 			$this->model_tool_online->addOnline($ip, $this->customer->getId(), $url, $referer);
 		}
 
-		return $this->load->view('common/footer', $data);
+			return $this->load->view('common/footer.tpl', $data);
 	}
 }

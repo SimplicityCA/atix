@@ -35,6 +35,12 @@ class ControllerCommonHeader extends Controller {
 		$data['lang'] = $this->language->get('code');
 		$data['direction'] = $this->language->get('direction');
 
+		$data['theme_path'] = $this->config->get('config_template');
+
+		$data['header_top'] = $this->load->controller('common/header_top');
+		$data['header_right'] = $this->load->controller('common/header_right');
+		$data['header_bottom'] = $this->load->controller('common/header_bottom');
+		$data['header_left'] = $this->load->controller('common/header_left');
 		$data['name'] = $this->config->get('config_name');
 
 		if (is_file(DIR_IMAGE . $this->config->get('config_logo'))) {
@@ -107,8 +113,27 @@ class ControllerCommonHeader extends Controller {
 						'filter_sub_category' => true
 					);
 
+					/* 2 Level Sub Categories START */
+					$childs_data = array();
+					$child_2 = $this->model_catalog_category->getCategories($child['category_id']);
+
+					foreach ($child_2 as $childs) {
+						$filter_data = array(
+							'filter_category_id'  => $childs['category_id'],
+							'filter_sub_category' => true
+						);
+
+						$childs_data[] = array(
+							'name'  => $childs['name'] . ($this->config->get('config_product_count') ? ' (' . $this->model_catalog_product->getTotalProducts($filter_data) . ')' : ''),
+							'href'  => $this->url->link('product/category', 'path=' . $category['category_id'] . '_' . $child['category_id'] . '_' . $childs['category_id'])
+						);
+					}
+					/* 2 Level Sub Categories END */
+
 					$children_data[] = array(
 						'name'  => $child['name'] . ($this->config->get('config_product_count') ? ' (' . $this->model_catalog_product->getTotalProducts($filter_data) . ')' : ''),
+						'childs' => $childs_data,
+						'column'   => $child['column'] ? $child['column'] : 1,
 						'href'  => $this->url->link('product/category', 'path=' . $category['category_id'] . '_' . $child['category_id'])
 					);
 				}
@@ -147,6 +172,6 @@ class ControllerCommonHeader extends Controller {
 			$data['class'] = 'common-home';
 		}
 
-		return $this->load->view('common/header', $data);
+			return $this->load->view('common/header.tpl', $data);
 	}
 }
