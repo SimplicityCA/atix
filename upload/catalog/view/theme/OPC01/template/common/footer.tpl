@@ -25,7 +25,7 @@
         </ul>
       </div>
       <?php } ?>
-      <div class="col-sm-3 footer-column hb-animate-element bottom-to-top <?php echo strtolower('footer-'.str_replace(' ', '-', $text_extra)); ?>">
+      <!-- <div class="col-sm-3 footer-column hb-animate-element bottom-to-top <?php echo strtolower('footer-'.str_replace(' ', '-', $text_extra)); ?>">
         <h5><?php echo $text_extra; ?></h5>
         <ul class="list-unstyled">
           <li><a href="<?php echo $manufacturer; ?>"><?php echo $text_manufacturer; ?></a></li>
@@ -34,7 +34,7 @@
           <li><a href="<?php echo $special; ?>"><?php echo $text_special; ?></a></li>
           <li><a href="<?php echo $sitemap; ?>"><?php echo $text_sitemap; ?></a></li>
         </ul>
-      </div>
+      </div> -->
       <div class="col-sm-3 footer-column hb-animate-element top-to-bottom <?php echo strtolower('footer-'.str_replace(' ', '-', $text_account)); ?>">
         <h5><?php echo $text_account; ?></h5>
         <ul class="list-unstyled">

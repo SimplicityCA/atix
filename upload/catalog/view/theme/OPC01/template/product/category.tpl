@@ -5,6 +5,24 @@
     <li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
     <?php } ?>
   </ul>
+  <div class="row">
+	  <div id="hero_category" class="col-sm-12"><?php echo $content_top; ?>
+		  <!-- Category Description START -->
+	      <h1 class="category-name"><?php echo $heading_title; ?></h1>
+	      <?php if ($thumb || $description) { ?>
+		  <div class="category-description">
+			<div class="row">
+	        <?php if ($thumb) { ?>
+	        <div class="col-sm-12 category-image"><img src="<?php echo $thumb; ?>" alt="<?php echo $heading_title; ?>" title="<?php echo $heading_title; ?>" class="img-thumbnail" /></div>
+	        <?php } ?>
+	        <?php if ($description) { ?>
+	        <div class="col-sm-12 category-content"><?php echo $description; ?></div>
+	        <?php } ?>
+	      </div>
+	      </div>
+	      <?php } ?>
+	  </div>
+  </div>
   <div class="row"><?php echo $column_left; ?>
     <?php if ($column_left && $column_right) { ?>
     <?php $class = 'col-sm-6'; ?>
@@ -14,9 +32,11 @@
     <?php $class = 'col-sm-12'; ?>
     <?php } ?>
 
+    
+
     <div id="content" class="<?php echo $class; ?>"><?php echo $content_top; ?>
 	  <!-- Category Description START -->
-      <h1 class="category-name"><?php echo $heading_title; ?></h1>
+      <!-- <h1 class="category-name"><?php echo $heading_title; ?></h1>
       <?php if ($thumb || $description) { ?>
 	  <div class="category-description">
 		<div class="row">
@@ -28,7 +48,7 @@
         <?php } ?>
       </div>
       </div>
-      <?php } ?>
+      <?php } ?> -->
 	  <!-- Category Description END -->
 
 	  <!-- Category listing START -->
