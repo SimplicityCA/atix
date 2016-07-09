@@ -1,0 +1,11 @@
+2016-07-09 22:40:37 - PHP Warning:  Missing argument 2 for ModelToolImage::resize() in /Users/franklin/Sites/atix/upload/catalog/model/tool/image.php on line 3
+2016-07-09 22:40:37 - PHP Warning:  Missing argument 3 for ModelToolImage::resize() in /Users/franklin/Sites/atix/upload/catalog/model/tool/image.php on line 3
+2016-07-09 22:40:37 - PHP Notice:  Undefined variable: width in /Users/franklin/Sites/atix/upload/catalog/model/tool/image.php on line 11
+2016-07-09 22:40:37 - PHP Notice:  Undefined variable: height in /Users/franklin/Sites/atix/upload/catalog/model/tool/image.php on line 11
+2016-07-09 22:40:37 - PHP Notice:  Undefined variable: width in /Users/franklin/Sites/atix/upload/catalog/model/tool/image.php on line 28
+2016-07-09 22:40:37 - PHP Notice:  Undefined variable: width in /Users/franklin/Sites/atix/upload/catalog/model/tool/image.php on line 30
+2016-07-09 22:40:37 - PHP Notice:  Undefined variable: height in /Users/franklin/Sites/atix/upload/catalog/model/tool/image.php on line 30
+2016-07-09 22:40:37 - PHP Warning:  imagecreatetruecolor(): Invalid image dimensions in /Users/franklin/Sites/atix/upload/system/library/image.php on line 105
+2016-07-09 22:40:37 - PHP Warning:  imagecolorallocate() expects parameter 1 to be resource, boolean given in /Users/franklin/Sites/atix/upload/system/library/image.php on line 113
+2016-07-09 22:40:37 - PHP Warning:  imagefilledrectangle() expects parameter 1 to be resource, boolean given in /Users/franklin/Sites/atix/upload/system/library/image.php on line 116
+2016-07-09 22:40:37 - PHP Warning:  imagecopyresampled() expects parameter 1 to be resource, boolean given in /Users/franklin/Sites/atix/upload/system/library/image.php on line 118
