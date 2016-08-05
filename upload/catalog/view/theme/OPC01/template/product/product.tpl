@@ -83,7 +83,7 @@ $(".additional-images-container .customNavigation").addClass('owl-navigation');
 		    <?php if ($review_status) { ?>
 		  <div class="rating">
 		  	<!-- Product Rating START -->
-			  <div class="product-rating">
+			  <!-- <div class="product-rating">
 				  <?php for ($i = 1; $i <= 5; $i++) { ?>
 				  <?php if ($rating < $i) { ?>
 				  <span class="fa fa-stack"><i class="fa fa-star off fa-stack-1x"></i></span>
@@ -93,7 +93,7 @@ $(".additional-images-container .customNavigation").addClass('owl-navigation');
 				  <?php } ?>
 			  </div>
               <a class="product-total-review" href="" onclick="$('a[href=\'#tab-review\']').trigger('click'); return false;"><i class="fa fa-comment"></i><?php echo $reviews; ?></a> <a class="product-write-review" href=""  onclick="$('a[href=\'#tab-review\']').trigger('click'); return false;"><i class="fa fa-pencil"></i>
- <?php echo $text_write; ?></a>
+ <?php echo $text_write; ?></a> -->
 		  	<!-- Product Rating END -->
           </div>
 		  <?php } ?>
@@ -324,7 +324,7 @@ $(".additional-images-container .customNavigation").addClass('owl-navigation');
 	<?php echo $column_right; ?>
 
 	  <!-- Product nav Tabs START -->
-	  <div class="col-sm-12 product-tabs">
+	  <!-- <div class="col-sm-12 product-tabs">
 			<ul class="nav nav-tabs">
             <li class="active"><a href="#tab-description" data-toggle="tab"><?php echo $tab_description; ?></a></li>
             <?php if ($attribute_groups) { ?>
@@ -404,7 +404,7 @@ $(".additional-images-container .customNavigation").addClass('owl-navigation');
 			</div>
             <?php } ?>
           </div>
-	  </div>
+	  </div> -->
 	  <!-- Product nav Tabs END -->
 
 	  <!-- Related products START -->

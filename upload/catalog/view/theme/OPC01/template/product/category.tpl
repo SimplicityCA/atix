@@ -61,7 +61,18 @@
 				<div class="col-sm-12">
 				  <ul>
 					<?php foreach ($categories as $category) { ?>
-					<li><a href="<?php echo $category['href']; ?>"><?php echo $category['name']; ?></a></li>
+					<li> 
+						<!-- Aumentar linea de imagen -->
+						<div class="image">
+							<a href="<?php echo $category['href']; ?>"><img src="<?php echo $category['thumb']; ?>" alt="<?php echo $category['alt']; ?>" title="<?php echo $category['alt']; ?>" class="img-responsive" /></a>
+						</div>
+						<div class="thumb-description">
+			              <div class="caption">
+			                <h4><a href="<?php echo $category['href']; ?>"><?php echo $category['name']; ?></a></h4>
+	                	  </div>
+	                	</div>
+                
+						</li>
 					<?php } ?>
 				  </ul>
 				</div>
