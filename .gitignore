@@ -3,4 +3,6 @@ upload/image/cache
 
 upload/system/storage/cache
 
+upload/system/storage/logs/error.log
 
+upload/config.php
