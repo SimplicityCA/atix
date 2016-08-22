@@ -27,11 +27,19 @@ $_['column_action']          = 'Action';
 // Entry
 $_['entry_name']             = 'Product Name';
 $_['entry_description']      = 'Description';
-$_['entry_meta_title'] 	     = 'Meta Tag Title';
-$_['entry_meta_keyword'] 	 = 'Meta Tag Keywords';
-$_['entry_meta_description'] = 'Meta Tag Description';
-$_['entry_keyword']          = 'SEO URL';
-$_['entry_model']            = 'Model';
+$_['entry_model'] 	 		 = 'Model';
+$_['entry_keyword'] 	 	 = 'Keyword';
+$_['entry_meta_title'] 	     = 'Meta Title';
+$_['entry_meta_description'] = 'Meta Description';
+$_['entry_meta_keyword'] 	 = 'Meta Keyword';
+
+$_['entry_beads']                = 'Beads';
+$_['entry_chain']             	 = 'Chain';
+$_['entry_chain_color'] 	     = 'Chain Color';
+$_['entry_crochet'] 			 = 'Crochet';
+$_['entry_cord'] 			   	 = 'Cord';
+$_['entry_aditional_accesories'] = 'Aditional Accesories';
+
 $_['entry_sku']              = 'SKU';
 $_['entry_upc']              = 'UPC';
 $_['entry_ean']              = 'EAN';

@@ -21,9 +21,9 @@
 		<?php if ($column_left && $column_right) { ?>
 		<?php $class = 'col-sm-6'; ?>
 		<?php } elseif ($column_left || $column_right) { ?>
-		<?php $class = 'col-sm-7'; ?>
+		<?php $class = 'col-sm-6'; ?>
 		<?php } else { ?>
-		<?php $class = 'col-sm-7'; ?>
+		<?php $class = 'col-sm-6'; ?>
 		<?php } ?>
         <div class="<?php echo $class; ?> product-images">
           <?php if ($thumb || $images) { ?>
@@ -74,9 +74,9 @@ $(".additional-images-container .customNavigation").addClass('owl-navigation');
 		<?php if ($column_left && $column_right) { ?>
 		<?php $class = 'col-sm-6'; ?>
 		<?php } elseif ($column_left || $column_right) { ?>
-		<?php $class = 'col-sm-5'; ?>
+		<?php $class = 'col-sm-6'; ?>
 		<?php } else { ?>
-		<?php $class = 'col-sm-5'; ?>
+		<?php $class = 'col-sm-6'; ?>
 		<?php } ?>
 		<div class="<?php echo $class; ?> product-details">
           <h1 class="product-name"><?php echo $heading_title; ?></h1>
@@ -105,6 +105,12 @@ $(".additional-images-container .customNavigation").addClass('owl-navigation');
             <?php if ($reward) { ?>
             <tr><td><?php echo $text_reward; ?></td><td class="product-info-value"><?php echo $reward; ?></td></tr>
             <?php } ?>
+            <tr><td><?php echo $text_beads; ?></td><td class="product-info-value"><?php echo $beads; ?></td></tr>
+            <tr><td><?php echo $text_chain; ?></td><td class="product-info-value"><?php echo $chain; ?></td></tr>
+            <tr><td><?php echo $text_chain_color; ?></td><td class="product-info-value"><?php echo $chain_color; ?></td></tr>
+            <tr><td><?php echo $text_crochet; ?></td><td class="product-info-value"><?php echo $crochet; ?></td></tr>
+            <tr><td><?php echo $text_cord; ?></td><td class="product-info-value"><?php echo $cord; ?></td></tr>
+            <tr><td><?php echo $text_aditional_accesories; ?></td><td class="product-info-value"><?php echo $aditional_accesories; ?></td></tr>
             <tr><td><?php echo $text_stock; ?></td><td class="product-info-value"><?php echo $stock; ?></td></tr>
           </table>
 

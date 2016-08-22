@@ -104,6 +104,44 @@
                   <?php } ?>
                 </div>
               </div>
+
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="input-beads"><?php echo $entry_beads; ?></span></label>
+                <div class="col-sm-10">
+                  <input type="text" name="beads" value="<?php echo $beads; ?>" placeholder="<?php echo $entry_beads; ?>" id="input-beads" class="form-control" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="input-chain"><?php echo $entry_chain; ?></span></label>
+                <div class="col-sm-10">
+                  <input type="text" name="chain" value="<?php echo $chain; ?>" placeholder="<?php echo $entry_chain; ?>" id="input-chain" class="form-control" />
+                </div>
+              </div> 
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="input-chain-color"><?php echo $entry_chain_color; ?></span></label>
+                <div class="col-sm-10">
+                  <input type="text" name="chain_color" value="<?php echo $chain_color; ?>" placeholder="<?php echo $entry_chain_color; ?>" id="input-chain-color" class="form-control" />
+                </div>
+              </div>  
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="input-crochet"><?php echo $entry_crochet; ?></span></label>
+                <div class="col-sm-10">
+                  <input type="text" name="crochet" value="<?php echo $crochet; ?>" placeholder="<?php echo $entry_crochet; ?>" id="input-crochet" class="form-control" />
+                </div>
+              </div> 
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="input-cord"><?php echo $entry_cord; ?></span></label>
+                <div class="col-sm-10">
+                  <input type="text" name="cord" value="<?php echo $cord; ?>" placeholder="<?php echo $entry_cord; ?>" id="input-cord" class="form-control" />
+                </div>
+              </div>  
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="input-aditional-accesories"><?php echo $entry_aditional_accesories; ?></span></label>
+                <div class="col-sm-10">
+                  <input type="text" name="aditional_accesories" value="<?php echo $aditional_accesories; ?>" placeholder="<?php echo $entry_aditional_accesories; ?>" id="input-aditional-accesories" class="form-control" />
+                </div>
+              </div>    
+
               <div class="form-group">
                 <label class="col-sm-2 control-label" for="input-sku"><span data-toggle="tooltip" title="<?php echo $help_sku; ?>"><?php echo $entry_sku; ?></span></label>
                 <div class="col-sm-10">

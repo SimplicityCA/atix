@@ -229,6 +229,14 @@ class ControllerProductProduct extends Controller {
 			$data['text_select'] = $this->language->get('text_select');
 			$data['text_manufacturer'] = $this->language->get('text_manufacturer');
 			$data['text_model'] = $this->language->get('text_model');
+			
+			$data['text_beads'] = $this->language->get('text_beads');
+			$data['text_chain_color'] = $this->language->get('text_chain_color');
+			$data['text_crochet'] = $this->language->get('text_crochet');
+			$data['text_cord'] = $this->language->get('text_cord');
+			$data['text_aditional_accesories'] = $this->language->get('text_aditional_accesories');
+			$data['text_chain'] = $this->language->get('text_chain');
+
 			$data['text_reward'] = $this->language->get('text_reward');
 			$data['text_points'] = $this->language->get('text_points');
 			$data['text_stock'] = $this->language->get('text_stock');
@@ -270,6 +278,12 @@ class ControllerProductProduct extends Controller {
 			$data['reward'] = $product_info['reward'];
 			$data['points'] = $product_info['points'];
 			$data['description'] = html_entity_decode($product_info['description'], ENT_QUOTES, 'UTF-8');
+			$data['beads'] = $product_info['beads'];
+			$data['chain_color'] = $product_info['chain_color'];
+			$data['crochet'] = $product_info['crochet'];
+			$data['cord'] = $product_info['cord'];
+			$data['aditional_accesories'] = $product_info['aditional_accesories'];
+			$data['chain'] = $product_info['chain'];
 
 			if ($product_info['quantity'] <= 0) {
 				$data['stock'] = $product_info['stock_status'];

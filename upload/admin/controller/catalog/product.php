@@ -545,6 +545,14 @@ class ControllerCatalogProduct extends Controller {
 		$data['entry_meta_keyword'] = $this->language->get('entry_meta_keyword');
 		$data['entry_keyword'] = $this->language->get('entry_keyword');
 		$data['entry_model'] = $this->language->get('entry_model');
+		
+		$data['entry_beads'] = $this->language->get('entry_beads');
+		$data['entry_chain'] = $this->language->get('entry_chain');
+		$data['entry_chain_color'] = $this->language->get('entry_chain_color');
+		$data['entry_crochet'] = $this->language->get('entry_crochet');
+		$data['entry_cord'] = $this->language->get('entry_cord');
+		$data['entry_aditional_accesories'] = $this->language->get('entry_aditional_accesories');
+
 		$data['entry_sku'] = $this->language->get('entry_sku');
 		$data['entry_upc'] = $this->language->get('entry_upc');
 		$data['entry_ean'] = $this->language->get('entry_ean');
@@ -744,6 +752,54 @@ class ControllerCatalogProduct extends Controller {
 			$data['model'] = '';
 		}
 
+		if (isset($this->request->post['beads'])) {
+			$data['beads'] = $this->request->post['beads'];
+		} elseif (!empty($product_info)) {
+			$data['beads'] = $product_info['beads'];
+		} else {
+			$data['beads'] = '';
+		}
+
+		if (isset($this->request->post['chain'])) {
+			$data['chain'] = $this->request->post['chain'];
+		} elseif (!empty($product_info)) {
+			$data['chain'] = $product_info['chain'];
+		} else {
+			$data['chain'] = '';
+		}
+
+		if (isset($this->request->post['chain_color'])) {
+			$data['chain_color'] = $this->request->post['chain_color'];
+		} elseif (!empty($product_info)) {
+			$data['chain_color'] = $product_info['chain_color'];
+		} else {
+			$data['chain_color'] = '';
+		}
+
+		if (isset($this->request->post['crochet'])) {
+			$data['crochet'] = $this->request->post['crochet'];
+		} elseif (!empty($product_info)) {
+			$data['crochet'] = $product_info['crochet'];
+		} else {
+			$data['crochet'] = '';
+		}
+
+		if (isset($this->request->post['cord'])) {
+			$data['cord'] = $this->request->post['cord'];
+		} elseif (!empty($product_info)) {
+			$data['cord'] = $product_info['cord'];
+		} else {
+			$data['cord'] = '';
+		}
+
+		if (isset($this->request->post['aditional_accesories'])) {
+			$data['aditional_accesories'] = $this->request->post['aditional_accesories'];
+		} elseif (!empty($product_info)) {
+			$data['aditional_accesories'] = $product_info['aditional_accesories'];
+		} else {
+			$data['aditional_accesories'] = '';
+		}
+		
 		if (isset($this->request->post['sku'])) {
 			$data['sku'] = $this->request->post['sku'];
 		} elseif (!empty($product_info)) {

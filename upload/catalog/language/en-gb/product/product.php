@@ -5,6 +5,14 @@ $_['text_brand']               = 'Brand';
 $_['text_manufacturer']        = 'Brand:';
 $_['text_model']               = 'Product Code:';
 $_['text_reward']              = 'Reward Points:';
+
+$_['text_beads'] 			   	= 'Beads:';
+$_['text_chain_color'] 		   	= 'Chain Color:';
+$_['text_crochet'] 			   	= 'Crochet:';
+$_['text_cord'] 			   	= 'Cord:';
+$_['text_aditional_accesories'] = 'Aditional Accesories:';
+$_['text_chain'] 				= 'Chain:';
+
 $_['text_points']              = 'Price in reward points:';
 $_['text_stock']               = 'Availability:';
 $_['text_instock']             = 'In Stock';
