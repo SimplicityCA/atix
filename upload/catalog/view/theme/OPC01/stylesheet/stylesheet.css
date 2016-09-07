@@ -4,7 +4,7 @@ body {
 	font-weight: 400;
 	font-size: 13px;
 	line-height: 20px;
-	color: #666666;
+	color: #FFFFFF;
 }
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Raleway', Arial, Helvetica, sans-serif;
@@ -52,6 +52,17 @@ small, .small {
 label {
 	font-size: 13px;
 	font-weight: normal;
+}
+legend {
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 20px;
+    font-size: 21px;
+    line-height: inherit;
+    color: #FFF;
+    border: 0;
+    /*border-bottom: 1px solid #e5e5e5;*/
 }
 select.form-control {
 	appearance: none;
@@ -318,7 +329,7 @@ div.required .control-label:before {
     width: 100%;
 }
 .page-title-wrapper .page-title {
-    color: #222222;
+    color: #FFFFFF;
     float: left;
     font-family: "Raleway",arial,sans-serif;
     font-size: 20px;
@@ -1490,6 +1501,10 @@ header {
 #content h2.category-name {
 	margin-top: 0px;
 }
+h1.category-name {
+	color:#FFFFFF;
+}
+
 #column-left > div,
 #column-right > div {
     float: left;
@@ -3533,7 +3548,7 @@ footer #footer-right ul a::before {
 .breadcrumb i {
 	font-size: 15px;
 	vertical-align: baseline;
-	color:#333333;
+	color:#FFFFFF;
 }
 .breadcrumb > li {
 	white-space: nowrap;
@@ -3546,10 +3561,10 @@ footer #footer-right ul a::before {
 	font-size: 12px;
 	padding: 0 8px;
 	float: left;
-	color:#222222;
+	color:#FFFFFF;
 }
 .breadcrumb > li > a {
-    color: #222222;
+    color: #FFFFFF;
 }
 .breadcrumb > li > a:hover
 {

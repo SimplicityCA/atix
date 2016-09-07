@@ -105,7 +105,7 @@
         <?php } ?>
       </div>
       <?php } ?>
-      <div class="col-sm-12">
+      <div class="col-sm-12" style="margin-top:20px;">
       <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data" class="form-horizontal">
         <fieldset>
           <legend><?php echo $text_contact; ?></legend>
