@@ -1531,10 +1531,10 @@ header {
 }
 
 .category-list ul li {
-    background: none repeat scroll 0 0 #F1F1F1;
+    background: none repeat scroll 0 0 transparent;
     display: inline-block;
     list-style: none;
-    margin-right: 5px;
+    /*margin-right: 5px;*/
 }
 .category-list a {
 	padding: 5px 10px;
