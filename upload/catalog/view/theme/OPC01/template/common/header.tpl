@@ -65,9 +65,16 @@
 <nav id="top">
   <div class="container">
   	<div class="header-top-left col-sm-6">
-		<?php echo $currency; ?>
-		<?php echo $language; ?>
-		<div class="header-phone"><a href="<?php echo $contact; ?>"><i class="fa fa-phone"></i></a> <span class="hidden-xs hidden-sm hidden-md"><?php echo $telephone; ?></span></div>
+      <div id="logo">
+          <?php if ($logo) { ?>
+          <a href="<?php echo $home; ?>"><img src="<?php echo $logo; ?>" title="<?php echo $name; ?>" alt="<?php echo $name; ?>" class="img-responsive" /></a>
+          <?php } else { ?>
+          <h1><a href="<?php echo $home; ?>"><?php echo $name; ?></a></h1>
+          <?php } ?>
+        </div>
+		<?php //echo $currency; ?>
+		<?php //echo $language; ?>
+		<!-- <div class="header-phone"><a href="<?php echo $contact; ?>"><i class="fa fa-phone"></i></a> <span class="hidden-xs hidden-sm hidden-md"><?php echo $telephone; ?></span></div> -->
 	</div>
 	<div class="header-top-right">
 	    <div id="top-links" class="nav pull-right">
@@ -116,7 +123,7 @@
 		  <?php echo $header_left; ?>
 	  </div>
 	  <?php } ?>
-      <div class="col-sm-12 header-left">
+      <!-- <div class="col-sm-12 header-left">
         <div id="logo">
           <?php if ($logo) { ?>
           <a href="<?php echo $home; ?>"><img src="<?php echo $logo; ?>" title="<?php echo $name; ?>" alt="<?php echo $name; ?>" class="img-responsive" /></a>
@@ -124,7 +131,7 @@
           <h1><a href="<?php echo $home; ?>"><?php echo $name; ?></a></h1>
           <?php } ?>
         </div>
-      </div>
+      </div> -->
       
 	  <?php if($header_right) { ?>
 	  <div class="header-right-cms col-sm-3">
