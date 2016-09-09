@@ -5851,7 +5851,53 @@ h1.category-name {
 	color: #222222;
 	color: #FFFFFF;
 }
-
+.common-home #ttcmssubbanners > .ttsubbannerblock {
+	margin-top: 30px;
+	position: relative;
+}
+.common-home #ttcmssubbanners > .ttsubbannerblock::before {
+	content: "Dummy text";
+    width: 146px;
+    height: 146px;
+    background: url("CustomImages/atix_middle_logo.png");
+    position: absolute;
+    background-size: 146px 146px;
+    background-repeat: no-repeat;
+    z-index: 10;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: -84px;
+    color: transparent;
+}
+@media (min-width: 768px) {
+	.common-home .ttsubbanner.col-sm-5 {
+		width: 50%;
+	}
+	.common-home .ttsubbanner1.ttsubbanner.col-sm-5 .ttsubbanner-img img {
+		padding-right: 15px
+	}
+	.common-home .ttsubbanner2.ttsubbanner.col-sm-5 .ttsubbanner-img img {
+		padding-left: 15px
+	}
+}
+@media (max-width: 767px) {
+	.common-home .ttsubbanner.col-sm-5 {
+		width: 100%;
+		padding: 50px;
+	}
+	.common-home #ttcmssubbanners > .ttsubbannerblock::before {
+		display: none;
+	}
+}
+@media (max-width: 520px) {
+	.common-home .ttsubbanner.col-sm-5 {
+		padding: 25px;
+	}
+}
+.common-home .row .slideshow-panel .owl-pagination {
+	margin-bottom: 40px;
+}
 /* ---------------------- End custom styles --------------------------*/
 
 
