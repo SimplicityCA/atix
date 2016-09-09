@@ -5870,6 +5870,9 @@ h1.category-name {
     top: -84px;
     color: transparent;
 }
+.common-home .row .slideshow-panel .owl-pagination {
+	margin-bottom: 40px;
+}
 @media (min-width: 768px) {
 	.common-home .ttsubbanner.col-sm-5 {
 		width: 50%;
@@ -5893,21 +5896,25 @@ h1.category-name {
 		position: absolute;
 	    min-width: 50px;
 	    width: 200px;
-	    top: 112px;
+	    top: 50px;
 	    right: 0px !important;
 	    left: inherit;
 	}
 	.ttsearchtoggle {
 		display: block !important;
 	}
+	.header-top-left.col-sm-6 #logo img {
+		max-width: 70px;
+    	height: auto;
+	}
+	.common-home .row .slideshow-panel .owl-pagination {
+		margin-bottom: 0;
+	}
 }
 @media (max-width: 520px) {
 	.common-home .ttsubbanner.col-sm-5 {
 		padding: 25px;
 	}
-}
-.common-home .row .slideshow-panel .owl-pagination {
-	margin-bottom: 40px;
 }
 /* ---------------------- End custom styles --------------------------*/
 
