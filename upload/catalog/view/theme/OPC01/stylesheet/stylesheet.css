@@ -1539,7 +1539,7 @@ header {
 .category-list a {
 	padding: 5px 10px;
 	float: left;
-	color:#777777;
+	color:white;
 }
 .category-list a:hover,.category-compare > a:hover
 {
@@ -1639,7 +1639,7 @@ header {
     color: #e99700;
 }
 .product-thumb .thumb-description .caption a {
-    color: #444444;
+    color: white;
     font-family: pt sans,arial,sans-serif;
     font-size: 14px;
 	letter-spacing:0;
@@ -2299,7 +2299,7 @@ header {
 .product-details h1.product-name {
 	border-bottom: 1px solid;
 	margin: 0px;
-	  color: #222222;
+	  color: white;
     font-family: "pt sans",arial,sans-serif;
     font-size: 20px;
     margin: 0;
@@ -2340,7 +2340,7 @@ header {
 	border-color: #CCCCCC;
 }
 .product-details .price-new, .product-details .product-price h2 {
-    color: #222222;
+    color: white;
     font-size: 18px;
     font-weight: bold;
 	font-family:PT Sans;
@@ -2388,12 +2388,12 @@ header {
 	border:none;
 	background-color:transparent;
 	font-size:13px;
-	color:#777777;
+	color:white;
 	text-transform:capitalize;
 }
 .product-product .product-details .btn-group > button:hover
 {
-	color:#222222;
+	color:#e99700;
 }
 .product-product .product-details .addthis_toolbox > a:first-child {
 	margin: 0px;
@@ -3911,7 +3911,7 @@ h2.price {
 	margin: 0;
 }
 .product-thumb .price {
-	color: #444444;
+	color: white;
 	padding-bottom: 5px;
 	font-weight:bold;
 	font-size:14px;
