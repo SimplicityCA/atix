@@ -182,7 +182,7 @@ $(window).load(function() {
 			$(".services").height(maxHeight);
 			
 		}else{
-			("#ttcmsservices").height("auto");
+			$("#ttcmsservices").height("auto");
 			$(".ttservicebanner").height("auto");
 			$(".services").height("auto");
 		}
