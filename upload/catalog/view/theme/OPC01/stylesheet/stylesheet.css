@@ -5889,6 +5889,17 @@ h1.category-name {
 	.common-home #ttcmssubbanners > .ttsubbannerblock::before {
 		display: none;
 	}
+	#top-links > ul > li:last-child {
+		position: absolute;
+	    min-width: 50px;
+	    width: 200px;
+	    top: 112px;
+	    right: 0px !important;
+	    left: inherit;
+	}
+	.ttsearchtoggle {
+		display: block !important;
+	}
 }
 @media (max-width: 520px) {
 	.common-home .ttsubbanner.col-sm-5 {
