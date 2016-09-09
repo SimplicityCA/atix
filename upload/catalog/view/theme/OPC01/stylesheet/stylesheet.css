@@ -4,7 +4,7 @@ body {
 	font-weight: 400;
 	font-size: 13px;
 	line-height: 20px;
-	color: #FFFFFF;
+	color: #666666;
 }
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Raleway', Arial, Helvetica, sans-serif;
@@ -52,17 +52,6 @@ small, .small {
 label {
 	font-size: 13px;
 	font-weight: normal;
-}
-legend {
-    display: block;
-    width: 100%;
-    padding: 0;
-    margin-bottom: 20px;
-    font-size: 21px;
-    line-height: inherit;
-    color: #FFF;
-    border: 0;
-    /*border-bottom: 1px solid #e5e5e5;*/
 }
 select.form-control {
 	appearance: none;
@@ -329,7 +318,7 @@ div.required .control-label:before {
     width: 100%;
 }
 .page-title-wrapper .page-title {
-    color: #FFFFFF;
+    color: #222222;
     float: left;
     font-family: "Raleway",arial,sans-serif;
     font-size: 20px;
@@ -1501,10 +1490,6 @@ header {
 #content h2.category-name {
 	margin-top: 0px;
 }
-h1.category-name {
-	color:#FFFFFF;
-}
-
 #column-left > div,
 #column-right > div {
     float: left;
@@ -3548,7 +3533,7 @@ footer #footer-right ul a::before {
 .breadcrumb i {
 	font-size: 15px;
 	vertical-align: baseline;
-	color:#FFFFFF;
+	color:#333333;
 }
 .breadcrumb > li {
 	white-space: nowrap;
@@ -3561,10 +3546,10 @@ footer #footer-right ul a::before {
 	font-size: 12px;
 	padding: 0 8px;
 	float: left;
-	color:#FFFFFF;
+	color:#222222;
 }
 .breadcrumb > li > a {
-    color: #FFFFFF;
+    color: #222222;
 }
 .breadcrumb > li > a:hover
 {
@@ -5834,6 +5819,104 @@ body.product-compare .table-product-image > img { width: 100%; }
 
 /* ---------------------- End TemplateTrip - TestimonialParallax --------------------------*/
 
+/* ---------------------- Start custom styles --------------------------*/
+body {
+	color: #FFFFFF;
+}
+legend {
+     display: block;
+     width: 100%;
+     padding: 0;
+     margin-bottom: 20px;
+     font-size: 21px;
+     line-height: inherit;
+     color: #FFF;
+     border: 0;
+     /*border-bottom: 1px solid #e5e5e5;*/
+ }
+
+.page-title-wrapper .page-title {
+	color: #FFFFFF;
+}
+h1.category-name {
+	color:#FFFFFF;
+}
+.breadcrumb i {
+	color:#FFFFFF;
+}
+.breadcrumb > li + li:before {
+	color:#FFFFFF;
+}
+.breadcrumb > li > a {
+	color: #222222;
+	color: #FFFFFF;
+}
+.common-home #ttcmssubbanners > .ttsubbannerblock {
+	margin-top: 30px;
+	position: relative;
+}
+.common-home #ttcmssubbanners > .ttsubbannerblock::before {
+	content: "Dummy text";
+    width: 146px;
+    height: 146px;
+    background: url("CustomImages/atix_middle_logo.png");
+    position: absolute;
+    background-size: 146px 146px;
+    background-repeat: no-repeat;
+    z-index: 10;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: -84px;
+    color: transparent;
+}
+.common-home .row .slideshow-panel .owl-pagination {
+	margin-bottom: 40px;
+}
+@media (min-width: 768px) {
+	.common-home .ttsubbanner.col-sm-5 {
+		width: 50%;
+	}
+	.common-home .ttsubbanner1.ttsubbanner.col-sm-5 .ttsubbanner-img img {
+		padding-right: 15px
+	}
+	.common-home .ttsubbanner2.ttsubbanner.col-sm-5 .ttsubbanner-img img {
+		padding-left: 15px
+	}
+}
+@media (max-width: 767px) {
+	.common-home .ttsubbanner.col-sm-5 {
+		width: 100%;
+		padding: 50px;
+	}
+	.common-home #ttcmssubbanners > .ttsubbannerblock::before {
+		display: none;
+	}
+	#top-links > ul > li:last-child {
+		position: absolute;
+	    min-width: 50px;
+	    width: 200px;
+	    top: 50px;
+	    right: 0px !important;
+	    left: inherit;
+	}
+	.ttsearchtoggle {
+		display: block !important;
+	}
+	.header-top-left.col-sm-6 #logo img {
+		max-width: 70px;
+    	height: auto;
+	}
+	.common-home .row .slideshow-panel .owl-pagination {
+		margin-bottom: 0;
+	}
+}
+@media (max-width: 520px) {
+	.common-home .ttsubbanner.col-sm-5 {
+		padding: 25px;
+	}
+}
+/* ---------------------- End custom styles --------------------------*/
 
 
 
