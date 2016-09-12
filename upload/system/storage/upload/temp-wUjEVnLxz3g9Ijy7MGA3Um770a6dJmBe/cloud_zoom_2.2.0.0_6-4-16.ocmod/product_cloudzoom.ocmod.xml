@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modification>
+    <name>Product Cloud zoom</name>
+    <version>1.0</version>
+    <author>info@inceptionsystem.com</author>
+    <link>www.inceptionsystem.com</link>
+	<code>cloudzoom</code>
+
+	<file path="catalog/controller/common/header.php">
+		<operation>
+			<search><![CDATA[$data['cart'] = $this->load->controller('common/cart');]]></search>
+			<add position="after"><![CDATA[$data['cloudzoom'] = $this->config->get('cloudzoom');]]></add>
+		</operation>
+	</file>	
+	<file path="catalog/view/theme/*/template/common/header.tpl">
+		<operation>
+			<search><![CDATA[</header>]]></search>
+			<add position="after"><![CDATA[<style type="text/css">
+			<?php if(isset($cloudzoom)){ echo $cloudzoom['style']; } ?>
+			</style>]]></add>
+		</operation>
+	</file>	
+	<file path="catalog/controller/product/product.php">
+		<operation>
+			<search><![CDATA[$this->document->addScript('catalog/view/javascript/jquery/magnific/jquery.magnific-popup.min.js');]]></search>
+			<add position="after"><![CDATA[			$this->document->addStyle('catalog/view/javascript/jquery/owl-carousel/owl.carousel.css');
+			$this->document->addScript('catalog/view/javascript/jquery/owl-carousel/owl.carousel.min.js');
+			$this->document->addScript('catalog/view/javascript/jquery/jcarousellite/jquery.jcarousellite.min.js');
+			
+			]]></add>
+		</operation>
+		<operation>
+			<search><![CDATA['popup' => $this->model_tool_image->resize($result['image'], $this->config->get($this->config->get('config_theme') . '_image_popup_width'), $this->config->get($this->config->get('config_theme') . '_image_popup_height')),]]></search>
+			<add position="after"><![CDATA['MainThumb' => $this->model_tool_image->resize($result['image'], $this->config->get($this->config->get('config_theme') . '_image_thumb_width'), $this->config->get($this->config->get('config_theme') . '_image_thumb_height')),]]></add>
+		</operation>
+		<operation>
+			<search><![CDATA[$this->load->model('tool/image');]]></search>
+			<add position="after"><![CDATA[$data['cloudzoom'] = $this->config->get('cloudzoom');
+			]]></add>
+		</operation>		
+	</file>
+	<file path="catalog/view/theme/*/template/product/product.tpl">
+		<operation>
+			<search><![CDATA[<?php if ($thumb || $images) { ?>]]></search>
+			<add position="replace" offset="11"><![CDATA[
+					<script>
+			    	$(document).ready(function(){
+			    	     if($(window).width() > 992) {
+     			    		<?php if($cloudzoom['type'] == 2) { ?>
+     			    			$('#image').elevateZoom({
+     			    				zoomType: "inner",
+     			    				cursor: "pointer",
+     			    				zoomWindowFadeIn: 500,
+     			    				zoomWindowFadeOut: 750
+     			    			});
+     			    		<?php } else { ?>
+     				    		$('#image').elevateZoom({
+     								zoomWindowFadeIn: 500,
+     								zoomWindowFadeOut: 500,
+     								zoomWindowOffetx: 20,
+     								zoomWindowOffety: -1,
+     								cursor: "pointer",
+     								lensFadeIn: 600,
+     								lensFadeOut: 600,
+     								zoomWindowWidth: 300,
+     								zoomWindowHeight: 300
+     				    		});
+     			    		<?php } ?>
+     			    		
+     			    		var z_index = 0;
+     			    		
+     			    		$(document).on('click', '.open-popup-image', function () {
+     			    		  $('.popup-gallery').magnificPopup('open', z_index);
+     			    		  return false;
+     			    		});
+			    		
+     			    		$('.thumbnails a, .thumbnails-carousel a').click(function() {
+     			    			var smallImage = $(this).attr('data-image');
+     			    			var largeImage = $(this).attr('data-zoom-image');
+     			    			var ez =   $('#image').data('elevateZoom');	
+     			    			$('#ex1').attr('href', largeImage);  
+     			    			ez.swaptheimage(smallImage, largeImage); 
+     			    			z_index = $(this).index('.thumbnails a, .thumbnails-carousel a');
+     			    			return false;
+     			    		});
+			    		} else {
+			    			$(document).on('click', '.open-popup-image', function () {
+			    			  $('.popup-gallery').magnificPopup('open', 0);
+			    			  return false;
+			    			});
+			    		}
+			    	});
+			    </script>
+				
+				<div class="col-sm-12 popup-gallery">
+					<div class="row">
+						 <?php if (($images) && $cloudzoom['position'] == 1) { ?>
+							  <div class="col-sm-3">
+									<div class="clearfix hr-nav">		
+										<a href="#" class="prev">&lsaquo;</a>
+										<a href="#" class="next">&rsaquo;</a>
+									</div>							  
+								<div class="thumbnails vertical-carousel clearfix">
+									<ul>
+									  <?php /*if($thumb) { ?>
+									  <li><p><a href="<?php echo $popup; ?>" class="popup-image" data-image="<?php echo $thumb; ?>" data-zoom-image="<?php echo $popup; ?>"><img src="<?php echo $thumb; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" /></a></p></li>
+									  <?php }*/ ?>
+									  <?php foreach ($images as $image) { ?>
+									  <li><p><a href="<?php echo $image['popup']; ?>" class="popup-image" data-image="<?php echo $image['MainThumb']; ?>" data-zoom-image="<?php echo $image['popup']; ?>"><img src="<?php echo $image['thumb']; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" /></a></p></li>
+									  <?php } ?>
+								  </ul>
+								</div>
+							  </div>
+									<script type="text/javascript">
+										$(function() {
+											$(".vertical-carousel").jCarouselLite({
+												btnNext: ".hr-nav .next",
+												btnPrev: ".hr-nav .prev",
+												vertical: true
+											});
+										});
+									</script>
+						 <?php } ?>
+						 
+						  <div class="col-sm-<?php if($cloudzoom['position'] == 1) { echo 9; } else { echo 12; } ?>">
+							<?php if ($thumb) { ?>
+								<div class="product-image <?php if($cloudzoom['type'] != 2) { if($cloudzoom['type'] == 1) { echo 'inner-cloud-zoom'; } else { echo 'cloud-zoom'; } } ?>">
+									<a href="<?php echo $popup; ?>" title="<?php echo $heading_title; ?>" id="ex1" <?php if($cloudzoom['type'] == 2) { ?>class="popup-image"<?php } else { echo 'class="open-popup-image"'; } ?>><img src="<?php echo $thumb; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" id="image" itemprop="image" data-zoom-image="<?php echo $popup; ?>" /></a>
+									<?php foreach ($images as $image) { ?>
+										<a style="display:none;" href="<?php echo $image['popup']; ?>"  class="popup-image" ><img src="<?php echo $image['thumb']; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" /></a>
+									<?php } ?> 
+								</div>
+							 <?php } else { ?>
+							 <div class="product-image">
+								 <img src="image/no_image.jpg" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" id="image" itemprop="image" />
+							 </div>
+							 <?php } ?>
+						  </div>					
+
+
+				      <?php if (($images) && $cloudzoom['position'] == 2) { ?>
+				      <div class="col-sm-12">
+				           <div class="overflow-thumbnails-carousel clearfix">
+     					      <div class="thumbnails-carousel owl-carousel">
+     					      	<?php /*if($thumb) { ?>
+     					      	     <div class="item"><a href="<?php echo $popup; ?>" class="popup-image" data-image="<?php echo $thumb; ?>" data-zoom-image="<?php echo $popup; ?>"><img src="<?php echo $thumb; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" /></a></div>
+     					      	<?php }*/ ?>
+     						     <?php foreach ($images as $image) { ?>
+     						         <div class="item"><a href="<?php echo $image['popup']; ?>" class="popup-image" data-image="<?php echo $image['MainThumb']; ?>" data-zoom-image="<?php echo $image['popup']; ?>"><img src="<?php echo $image['thumb']; ?>" title="<?php echo $heading_title; ?>" alt="<?php echo $heading_title; ?>" /></a></div>
+     						     <?php } ?>
+     					      </div>
+					      </div>
+					      
+					      <script type="text/javascript">
+					           $(document).ready(function() {
+					             $(".thumbnails-carousel").owlCarousel({
+					                 autoPlay: 6000, //Set AutoPlay to 3 seconds
+					                 navigation: true,
+					                 navigationText: ['', ''],
+					                 itemsCustom : [
+					                   [0, 4],
+					                   [450, 5],
+					                   [550, 6],
+					                   [768, 3],
+					                   [1200, 6]
+					                 ],
+					             });
+					           });
+					      </script>
+				      </div>
+				      <?php } ?>						  
+							<script type="text/javascript">
+								$(document).ready(function() {
+									$('.product-image').magnificPopup({
+										type:'image',
+										delegate: 'a',
+										gallery: {
+											enabled:true
+										}
+									});
+								});
+							</script>			 
+					</div>
+				</div>
+				]]></add>
+		</operation>
+		<operation>
+			<search><![CDATA[<?php echo $footer; ?>]]></search>
+			<add position="before"><![CDATA[<script type="text/javascript" src="catalog/view/javascript/jquery.elevateZoom-3.0.3.min.js"></script>]]></add>
+		</operation>		
+	</file>
+</modification>
